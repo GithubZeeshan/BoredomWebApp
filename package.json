@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/GithubZeeshan/BoredomWebApp#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "ejs": "^2.6.1",
+    "express": "^4.17.1",
+    "request": "^2.88.0"
   }
 }
