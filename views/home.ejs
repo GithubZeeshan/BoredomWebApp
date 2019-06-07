@@ -1,1 +1,39 @@
-<h1>Boredom Web App</h1>
+<div class="container">
+    <h1>Bored? Let's find you something to do!</h1>
+
+    <!-- Form A (User gives activity criteria) -->
+    <form class="searchForm" action="/result" method="GET">
+        <p><b>Activity Type:</b></p>
+        <select name="activityType">
+            <option value="education">Education</option>
+            <option value="recreational">Recreational</option>
+            <option value="social">Social</option>
+            <option value="diy">DIY</option>
+            <option value="charity">Charity</option>
+            <option value="cooking">Cooking</option>
+            <option value="relaxation">Relaxation</option>
+            <option value="music">Music</option>
+            <option value="busywork">Busywork</option>
+        </select>
+
+        <p><b>Accessibility:</b></p>
+        <div class="rangeSlider">
+            <input type="range" min="0" max="10" value="5" class="slider" id="accessibility">
+        </div>
+
+        <p><b>Number of people:</b></p>
+
+        <p><b>Price Range:</b></p>
+        <div class="rangeSlider">
+            <input type="range" min="0" max="10" value="5" class="slider" id="price">
+        </div>
+
+        <button>Submit Form</button>
+    </form>
+
+    <!-- Form B (Choose a random activity for the user) -->
+    <form action="/result" method="GET">
+        <button name="activity" value="activity">Choose for me!</button>
+    </form>
+     
+</div>
