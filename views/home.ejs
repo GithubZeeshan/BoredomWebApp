@@ -1,39 +1,83 @@
-<div class="container">
-    <h1>Bored? Let's find you something to do!</h1>
+<html>
+    <head>
+        <title>Say goodbye to boredom!</title>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css">
+        <link rel="stylesheet" type="text/css" href="app.css">
+    </head>
 
-    <!-- Form A (User gives activity criteria) -->
-    <form class="searchForm" action="/result" method="GET">
-        <p><b>Activity Type:</b></p>
-        <select name="activityType">
-            <option value="education">Education</option>
-            <option value="recreational">Recreational</option>
-            <option value="social">Social</option>
-            <option value="diy">DIY</option>
-            <option value="charity">Charity</option>
-            <option value="cooking">Cooking</option>
-            <option value="relaxation">Relaxation</option>
-            <option value="music">Music</option>
-            <option value="busywork">Busywork</option>
-        </select>
-
-        <p><b>Accessibility:</b></p>
-        <div class="rangeSlider">
-            <input type="range" min="0" max="10" value="5" class="slider" id="accessibility">
+    <body>
+        <section class="hero is-fullheight has-background-black">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <figure class="image is-128x128 center">
+                    <img src="bored_man.png">
+                </figure>
+                <h1 class="title">Bored?</h1>
+                <h2 class="subtitle">Let's find you something to do!</h2>
+            </div>
         </div>
+        </section>
 
-        <p><b>Number of people:</b></p>
 
-        <p><b>Price Range:</b></p>
-        <div class="rangeSlider">
-            <input type="range" min="0" max="10" value="5" class="slider" id="price">
+        <div class="container has-text-centered">
+            <!-- Form A (User gives activity criteria) -->
+            <form class="searchForm" action="/result" method="GET">
+            <div class="columns">
+                <div class="fieldTitle column">
+                    <p><b>Activity Type:</b></p>
+                </div>
+                <div class="select is-rounded fieldValue column">
+                    <select name="activityType">
+                        <option value="education">Education</option>
+                        <option value="recreational">Recreational</option>
+                        <option value="social">Social</option>
+                        <option value="diy">DIY</option>
+                        <option value="charity">Charity</option>
+                        <option value="cooking">Cooking</option>
+                        <option value="relaxation">Relaxation</option>
+                        <option value="music">Music</option>
+                        <option value="busywork">Busywork</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="columns">
+                <div class="fieldTitle column">
+                    <p><b>Accessibility:</b></p>
+                </div>
+                <div class="rangeSlider fieldValue column">
+                    <input type="range" min="0" max="10" value="5" class="slider" id="accessibility">
+                </div>
+            </div>
+
+            <div class="columns">
+                <div class="fieldTitle column">
+                    <p class="column"><b>Number of people:</b></p>
+                </div>
+
+                <div class="fieldTitle column">
+                    <p class="column"><b>Number of people:</b></p>
+                </div>
+            </div>
+
+            <div class="columns">
+                <div class="fieldTitle column">
+                    <p><b>Price Range:</b></p>
+                </div>
+                <div class="rangeSlider fieldValue column">
+                    <input type="range" min="0" max="10" value="5" class="slider" id="price">
+                </div>
+            </div>
+
+            <div class="columns">
+                <button class="button is-primary column">Submit Form</button>
+
+            <!-- Form B (Choose a random activity for the user) -->
+            <form action="/result" method="GET">
+                <button class="button is-primary column" name="activity" value="activity">Choose for me!</button>
+            </form>
+            </form>
+            </div>
         </div>
-
-        <button>Submit Form</button>
-    </form>
-
-    <!-- Form B (Choose a random activity for the user) -->
-    <form action="/result" method="GET">
-        <button name="activity" value="activity">Choose for me!</button>
-    </form>
-     
-</div>
+    </body>
+</html>

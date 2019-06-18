@@ -1,0 +1,20 @@
+.center{
+    display: block;
+    margin: 0 auto;
+}
+
+.title{
+    font-size: 5em;
+}
+
+.title, .subtitle{
+    color: white;
+}
+
+.searchForm{
+    width: 50%;
+    margin: 5% auto;
+    background-color: #209CEE;
+    color: white;
+}
+
