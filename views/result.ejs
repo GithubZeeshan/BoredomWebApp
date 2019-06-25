@@ -1,7 +1,75 @@
-<h1>HELLO!</h1>
+<html>
+    <head>
+        <title>Say goodbye to boredom!</title>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css">
+        <link rel="stylesheet" type="text/css" href="app.css">
+    </head>
+    <body>
+        <section class="hero is-small">
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <figure class="image is-128x128 center">
+                        <img src="bored_man.png">
+                    </figure>
+                    <h1 class="title">Bored no more!</h1>
+                    <h2 class="subtitle">Jump into this task and kill your boredom!</h2>
+                </div>
+            </div>
+        </section>
 
-<p><b>Activity:</b> <%= data.activity %></p>
-<p><b>Accessibility:</b> <%= data.ccessibility %></p>
-<p><b>Type:</b> <%= data.type %></p>
-<p><b>Participants:</b> <%= data.participants %></p>
-<p><b>Price:</b> <%= data.price %></p>
+        <div class="container has-text-centered resultDiv">
+            <div class="columns">
+                <div class="column is-4">
+                    <p><b>Activity:</b></p>
+                </div>
+                <div class="column is-4">
+                    <p><%= data.activity %></p>
+                </div>
+            </div>
+
+            <div class="columns">          
+                <div class="column is-4">
+                    <p><b>Accessibility:</b></p>
+                </div> 
+                <div class="column is-4">
+                    <p><%= data.ccessibility %></p>
+                </div>
+            </div>
+
+            <div class="columns">          
+                <div class="column is-4">
+                    <p><b>Type:</b></p>
+                </div>
+                <div class="column is-4">
+                    <p><%= data.type %></p>
+                </div>
+            </div>
+
+            <div class="columns">
+                <div class="column is-4">
+                    <p><b>Participants:</b></p>
+                </div>
+                <div class="column is-4">
+                    <%= data.participants %></p>
+                </div>
+            </div>
+
+            <div class="columns">
+                <div class="column is-4">
+                    <p><b>Price:</b></p>
+                </div>
+                <div class="column is-4">
+                    <p><%= data.price %></p>
+                </div>
+            </div>
+
+            <div class="columns">
+                <div class="column is-4">
+                    <form action="/" method="GET">
+                        <button class="button is-primary column center is-4"><span class="btnText">Go again</span></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

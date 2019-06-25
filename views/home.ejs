@@ -6,7 +6,7 @@
     </head>
 
     <body>
-        <section class="hero is-fullheight has-background-black">
+        <section class="hero is-fullheight">
         <div class="hero-body">
             <div class="container has-text-centered">
                 <figure class="image is-128x128 center">
@@ -26,7 +26,7 @@
                 <div class="fieldTitle column">
                     <p><b>Activity Type:</b></p>
                 </div>
-                <div class="select is-rounded fieldValue column">
+                <div class="fieldValue column">
                     <select name="activityType">
                         <option value="education">Education</option>
                         <option value="recreational">Recreational</option>
@@ -43,20 +43,12 @@
 
             <div class="columns">
                 <div class="fieldTitle column">
-                    <p><b>Accessibility:</b></p>
+                    <p class="column"><b>Number of people:</b></p>
                 </div>
+
                 <div class="rangeSlider fieldValue column">
-                    <input type="range" min="0" max="10" value="5" class="slider" id="accessibility">
-                </div>
-            </div>
-
-            <div class="columns">
-                <div class="fieldTitle column">
-                    <p class="column"><b>Number of people:</b></p>
-                </div>
-
-                <div class="fieldTitle column">
-                    <p class="column"><b>Number of people:</b></p>
+                    <input class="checkbox" type="checkbox" name="participantIncluded" value="participantsInc">
+                    <input name="participants" type="range" min="0" max="10" value="1" class="slider">
                 </div>
             </div>
 
@@ -65,16 +57,16 @@
                     <p><b>Price Range:</b></p>
                 </div>
                 <div class="rangeSlider fieldValue column">
-                    <input type="range" min="0" max="10" value="5" class="slider" id="price">
+                    <input class="checkbox" type="checkbox" name="priceIncluded" value="priceInc">        
+                    <input name="price" type="range" min="0" max="10" value="5" class="slider" id="price">
                 </div>
             </div>
 
             <div class="columns">
-                <button class="button is-primary column">Submit Form</button>
+                <button class="button is-primary column center is-4"><span class="btnText">Submit Form</span></button>
 
             <!-- Form B (Choose a random activity for the user) -->
-            <form action="/result" method="GET">
-                <button class="button is-primary column" name="activity" value="activity">Choose for me!</button>
+                <button class="button is-primary column center is-4" name="randomActivity" value="activity"><span class="btnText">Choose for me!</span></button>
             </form>
             </form>
             </div>

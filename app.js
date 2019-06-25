@@ -15,14 +15,23 @@ app.get("/", (req, res) => {
 
 app.get("/result", (req, res) => {
 
-    if (req.query.activityType == undefined && req.query.numParticipants == undefined){
-        var url = 'http://www.boredapi.com/api/activity';
-    }
-    else{
-        var url = 'http://www.boredapi.com/api/activity?type=' + req.query.activityType;
+    var queryUrl = 'http://www.boredapi.com/api/activity';
+
+    if (!(req.query.randomActivity == "activity")){
+        var queryUrl = queryUrl + '?type=' + req.query.activityType;
+        
+        var priceInc = Boolean(req.query.priceIncluded);
+        var participantInc = Boolean(req.query.participantIncluded);
+        
+        if (priceInc){
+            var queryUrl = queryUrl + '&price=' + req.query.price;
+        }
+        if (participantInc){
+            var queryUrl = queryUrl + '&participants=' + req.query.participants;
+        }
     }
 
-    request(url, (error, response, body) => {
+    request(queryUrl, (error, response, body) => {
         if (error){
             console.log("Error");
             res.render("home");
